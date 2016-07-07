@@ -417,7 +417,7 @@ service_start() {
 service_url() {
   local SERVICE="$1"
   local SERVICE_ALIAS="$(service_alias "$SERVICE")"
-  echo "$PLUGIN_SCHEME://$SERVICE_ALIAS:${PLUGIN_DATASTORE_PORTS[0]}"
+  echo "$PLUGIN_SCHEME://$SERVICE_ALIAS:${PLUGIN_DATASTORE_PORTS[0]}$PLUGIN_URL"
 }
 
 update_plugin_scheme_for_app() {
